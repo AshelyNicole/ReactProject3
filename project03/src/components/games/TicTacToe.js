@@ -9,12 +9,16 @@ function TicTacToe() {
   );
 }
 
-function Square(props) {
-  return <button className="square"></button>;
-}
 // square
 // value(props)
 // onClick function (prop)
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+}
 
 // board
 // boardState
