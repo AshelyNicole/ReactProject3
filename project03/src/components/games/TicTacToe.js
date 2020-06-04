@@ -20,9 +20,14 @@ function Square(props) {
   );
 }
 
-// board
-// boardState
-// turnState
+// Creating the Board component
+function Board() {
+  // Creating the state of the board and filling the board with empty values
+  const [boardSquares, setBoardSquares] = useState(Array(9).fill(null));
+  // Creating the turn state and setting the state to true
+  const [xTurn, setXTurn] = useState(true);
+}
+
 // handleClick
 // copy of your board state
 // if the index of the board is fill, return
