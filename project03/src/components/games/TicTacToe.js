@@ -4,7 +4,7 @@ import "../styles/TicTacToe.css";
 function TicTacToe() {
   return (
     <div>
-      <Square />
+      <Board />
     </div>
   );
 }
@@ -28,7 +28,7 @@ function Board() {
   const [xTurn, setXTurn] = useState(true);
 
   // Creating handleClick function
-  handleClick = (index) => {
+  const handleClick = (index) => {
     // Making a copy of the board state
     const newSquares = [...boardSquares];
     // if the index of the board is fill, return
@@ -41,12 +41,30 @@ function Board() {
     setBoardSquares(newSquares);
     // set the state of the turn
     setXTurn(!setXTurn);
-    // create our board
+  };
+  // create a render square function
+  const renderSquares = (index) => {
+    // take in an index
+    return (
+      // return a square, with the correct value and function
+      <Square value={boardSquares[index]} onClick={() => handleClick(index)} />
+    );
   };
 
-  // create a render square function
-  // take in an index
-  // return a square, with the correct value and function
+  return (
+    // Creating the board
+    <div className="board">
+      <div className="row">
+        {renderSquares(0)} {renderSquares(1)} {renderSquares(2)}
+      </div>
+      <div className="row">
+        {renderSquares(3)} {renderSquares(4)} {renderSquares(5)}
+      </div>
+      <div className="row">
+        {renderSquares(6)} {renderSquares(7)} {renderSquares(8)}
+      </div>
+    </div>
+  );
 
   // Initiliaze status
 }
