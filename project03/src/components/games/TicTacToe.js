@@ -40,7 +40,7 @@ function Board() {
     // set the state of the board
     setBoardSquares(newSquares);
     // set the state of the turn
-    setXTurn(!setXTurn);
+    setXTurn(!xTurn);
   };
   // create a render square function
   const renderSquares = (index) => {
