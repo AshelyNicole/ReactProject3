@@ -33,24 +33,22 @@ function Board() {
     const newSquares = [...boardSquares];
     // if the index of the board is fill, return
     if (newSquares[index]) {
-      return;
+       return
     }
     // mutate that copy, add X or O and calculate turns
     newSquares[index] = xTurn ? "X" : "O";
     // set the state of the board
     setBoardSquares(newSquares);
     // set the state of the turn
-    setXTurn(!setXTurn);
+    setXTurn(!xTurn);
   };
-  // create a render square function
+  // create a render square function and pass in index
   const renderSquares = (index) => {
-    // take in an index
     return (
       // return a square, with the correct value and function
       <Square value={boardSquares[index]} onClick={() => handleClick(index)} />
     );
   };
-
   // Setting the turn order
   const turnOrder = `Next player: ${xTurn ? "X" : "O"}`;
 
@@ -80,3 +78,5 @@ function Board() {
 // else, return nothing
 
 export default TicTacToe;
+
+
