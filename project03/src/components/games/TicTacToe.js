@@ -69,6 +69,7 @@ function Board() {
   );
 }
 }
+
 // function that calculates the winner
 
 // get our set of winning lines
