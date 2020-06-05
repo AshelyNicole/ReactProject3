@@ -68,6 +68,7 @@ function Board() {
     </div>
   );
 }
+}
 // function that calculates the winner
 
 // get our set of winning lines
