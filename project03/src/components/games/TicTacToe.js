@@ -51,9 +51,13 @@ function Board() {
     );
   };
 
+  // Setting the turn order
+  const turnOrder = `Next player: ${xTurn ? "X" : "O"}`;
+
   return (
-    // Creating the board
+    // Creating the board and rendering turn order
     <div className="board">
+      <div className="turn-order">{turnOrder}</div>
       <div className="row">
         {renderSquares(0)} {renderSquares(1)} {renderSquares(2)}
       </div>
@@ -65,8 +69,6 @@ function Board() {
       </div>
     </div>
   );
-
-  // Initiliaze status
 }
 // function that calculates the winner
 
