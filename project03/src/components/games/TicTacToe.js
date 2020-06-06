@@ -71,6 +71,7 @@ function Board() {
 
 // function that calculates the winner
 calculateWinner = (squares) => {
+  // array of winning combinations
   const winningCombinations = [
     [0, 1, 2],
     [3, 4, 5],
@@ -81,11 +82,13 @@ calculateWinner = (squares) => {
     [0, 4, 8],
     [2, 4, 6],
   ];
+  // loop through winning combinations
+  for (let i = 0; i < winningCombinations.length; i++) {
+    const [one, two, three] = winningCombinations[i];
+    // check to see if values in the squares fulfill the winning combinations
+  }
 };
-// get our set of winning lines
 
-// loop through this set
-// check to see if values in our squares fulfill the winning requirement
 // If so, return X or O
 // else, return nothing
 
