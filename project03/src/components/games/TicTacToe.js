@@ -86,6 +86,11 @@ calculateWinner = (squares) => {
   for (let i = 0; i < winningCombinations.length; i++) {
     const [one, two, three] = winningCombinations[i];
     // check to see if values in the squares fulfill the winning combinations
+    if (squares[one] && squares[one] === squares[two] && squares[two] === squares[three]) {
+      return squares[one]
+    } else {
+      return null
+    }
   }
 };
 
