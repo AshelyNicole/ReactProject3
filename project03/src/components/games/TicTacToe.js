@@ -50,7 +50,8 @@ function Board() {
     );
   };
   // Setting the turn order
-  const turnOrder = `Next player: ${xTurn ? "X" : "O"}`;
+  const winner = calculateWinner(boardSquares)
+  const turnOrder = winner ? `Winner is: ${winner}` : `Next player: ${xTurn ? "X" : "O"}`;
 
   return (
     // Creating the board and rendering turn order
@@ -70,7 +71,7 @@ function Board() {
 }
 
 // function that calculates the winner
-calculateWinner = (squares) => {
+function calculateWinner(squares) {
   // array of winning combinations
   const winningCombinations = [
     [0, 1, 2],
@@ -85,16 +86,12 @@ calculateWinner = (squares) => {
   // loop through winning combinations
   for (let i = 0; i < winningCombinations.length; i++) {
     const [one, two, three] = winningCombinations[i];
-    // check to see if values in the squares fulfill the winning combinations
+    // check to see if values in the squares fulfill the winning combinations; If so, return X or O; else, return nothing
     if (squares[one] && squares[one] === squares[two] && squares[two] === squares[three]) {
       return squares[one]
-    } else {
-      return null
-    }
+    } 
   }
+  return null
 };
-
-// If so, return X or O
-// else, return nothing
 
 export default TicTacToe;
