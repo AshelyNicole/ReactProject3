@@ -30,6 +30,7 @@ function NavBar() {
         >
           <span className="navbar-toggler-icon" />
         </button>
+        <h1>Title(TBD)</h1>
       </nav>
     </div>
   );
