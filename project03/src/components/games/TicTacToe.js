@@ -31,9 +31,9 @@ function Board() {
   const handleClick = (index) => {
     // Making a copy of the board state
     const newSquares = [...boardSquares];
-    // if the index of the board is fill, return
-    if (newSquares[index]) {
-      return;
+    // if the index of the board is fill or there is a winner, return null
+    if (newSquares[index] || winner) {
+      return null;
     }
     // mutate that copy, add X or O and calculate turns
     newSquares[index] = xTurn ? "X" : "O";
@@ -42,18 +42,21 @@ function Board() {
     // set the state of the turn
     setXTurn(!xTurn);
   };
-  // create a render square function
+  // create a render square function and pass in index
   const renderSquares = (index) => {
-    // take in an index
     return (
       // return a square, with the correct value and function
       <Square value={boardSquares[index]} onClick={() => handleClick(index)} />
     );
   };
+  // Setting the turn order
+  const winner = calculateWinner(boardSquares)
+  const turnOrder = winner ? `Winner is: ${winner}` : `Next player: ${xTurn ? "X" : "O"}`;
 
   return (
-    // Creating the board
+    // Creating the board and rendering turn order
     <div className="board">
+      <div className="turn-order">{turnOrder}</div>
       <div className="row">
         {renderSquares(0)} {renderSquares(1)} {renderSquares(2)}
       </div>
@@ -65,16 +68,30 @@ function Board() {
       </div>
     </div>
   );
-
-  // Initiliaze status
 }
+
 // function that calculates the winner
-
-// get our set of winning lines
-
-// loop through this set
-// check to see if values in our squares fulfill the winning requirement
-// If so, return X or O
-// else, return nothing
+function calculateWinner(squares) {
+  // array of winning combinations
+  const winningCombinations = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  // loop through winning combinations
+  for (let i = 0; i < winningCombinations.length; i++) {
+    const [one, two, three] = winningCombinations[i];
+    // check to see if values in the squares fulfill the winning combinations; If so, return X or O; else, return nothing
+    if (squares[one] && squares[one] === squares[two] && squares[two] === squares[three]) {
+      return squares[one]
+    } 
+  }
+  return null
+};
 
 export default TicTacToe;

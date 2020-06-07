@@ -30,3 +30,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Turn Order */
+
+.turn-order {
+  font-weight: bold;
+  font-size: 35px;
+}
