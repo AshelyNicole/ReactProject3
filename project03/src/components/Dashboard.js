@@ -1,5 +1,7 @@
 import React from "react";
 import "./styles/Dashboard.css";
+import games from "../assets/games.jpg";
+import chattime from "../assets/chattime.jpg";
 
 function Dashboard() {
   return (
@@ -56,7 +58,7 @@ function Main() {
   return (
     <div className="row">
       <div className="card">
-        <img src="..." className="card-img-top" alt="..." />
+        <img src={games} className="card-img-top" alt="games" />
         <div className="card-body">
           <h5 className="card-title">Game Center</h5>
           <p className="card-text">
@@ -67,12 +69,12 @@ function Main() {
             Tetris!
           </a>
           <a href="#" className="btn btn-primary">
-            Tic-Tac-Toe
+            Tic-Tac-Toe!
           </a>
         </div>
       </div>
       <div className="card">
-        <img src="..." className="card-img-top" alt="..." />
+        <img src={chattime} className="card-img-top" alt="chattime" />
         <div className="card-body">
           <h5 className="card-title">Message</h5>
           <p className="card-text">
