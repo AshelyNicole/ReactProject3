@@ -17,10 +17,17 @@
 }
 
 .card {
-  margin: auto;
   width: 18rem;
+  margin: 100px;
 }
 
 .btn {
   margin: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 150px;
 }
