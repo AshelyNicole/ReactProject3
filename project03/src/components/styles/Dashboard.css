@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #c4c4c4;
+}
+
+.navbar-toggler.toggler {
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+}
+.icon-bars {
+  color: black;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: black;
+}
+
+.card {
+  margin: auto;
+  width: 18rem;
+}
+
+.btn {
+  margin: 5px;
+}

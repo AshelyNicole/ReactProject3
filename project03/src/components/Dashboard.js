@@ -5,33 +5,85 @@ function Dashboard() {
   return (
     <div>
       <NavBar />
+      <Main />
     </div>
   );
 }
 
 function NavBar() {
   return (
-    <div className="fixed-top">
-      <div className="collapse" id="navbarToggleExternalContent">
-        <div className="bg-secondary p-4">
-          <h5 className="text-white h4">Collapsed content</h5>
-          <span className="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-      <nav className="navbar navbar-dark bg-secondary">
+    <div>
+      <nav className="navbar">
+        <h1 className="navbar-text">Title(TBD)</h1>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarToggleExternalContent"
-          aria-controls="navbarToggleExternalContent"
+          data-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon" />
+          <span className="icon-bars">
+            <i className="fas fa-bars fa-1x" />
+          </span>
         </button>
-        <h1>Title(TBD)</h1>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent1">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">
+                Home <span className="sr-only">(current)</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Games
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Messaging
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
+    </div>
+  );
+}
+
+function Main() {
+  return (
+    <div>
+      <div className="card">
+        <img src="..." className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">Game Center</h5>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" className="btn btn-primary">
+            Tetris!
+          </a>
+          <a href="#" className="btn btn-primary">
+            Tic-Tac-Toe
+          </a>
+        </div>
+      </div>
+      <div className="card">
+        <img src="..." className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">Message</h5>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" className="btn btn-primary">
+            Chat
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
