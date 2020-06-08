@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -24,6 +25,7 @@
 .card {
   width: 18rem;
   margin-right: 100px;
+  margin-left: 100px;
 }
 
 .btn {
@@ -35,4 +37,17 @@
   justify-content: center;
   flex-direction: row;
   margin-top: 100px;
+}
+
+.copyright {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #c4c4c4;
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 1rem;
 }

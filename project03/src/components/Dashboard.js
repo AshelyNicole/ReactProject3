@@ -8,6 +8,7 @@ function Dashboard() {
     <div>
       <NavBar />
       <Main />
+      <Footer />
     </div>
   );
 }
@@ -62,8 +63,7 @@ function Main() {
         <div className="card-body">
           <h5 className="card-title">Game Center</h5>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Click on one of the buttons below to play our games
           </p>
           <a href="#" className="btn btn-primary">
             Tetris!
@@ -78,8 +78,7 @@ function Main() {
         <div className="card-body">
           <h5 className="card-title">Message</h5>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Click on the button below to start chatting with friends or family
           </p>
           <a href="#" className="btn btn-primary">
             Chat
@@ -90,4 +89,11 @@ function Main() {
   );
 }
 
+function Footer() {
+  return (
+    <footer className="copyright">
+      <p>© 2020 Dashboard</p>
+    </footer>
+  );
+}
 export default Dashboard;
