@@ -55,11 +55,17 @@
   font-size: 35px;
 }
 
+/* Footer */
+
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #c4c4c4;
+}
+
+.text {
   text-align: center;
+  font-weight: bold;
 }

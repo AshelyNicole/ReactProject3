@@ -121,7 +121,7 @@ function calculateWinner(squares) {
 function Footer() {
   return (
     <footer className="footer">
-      <p>© 2020 Game</p>
+      <p className="text">© 2020 Game</p>
     </footer>
   );
 }
