@@ -6,10 +6,12 @@ function TicTacToe() {
     <div>
       <Header />
       <Board />
+      <Footer />
     </div>
   );
 }
 
+// Header
 function Header() {
   return (
     <div>
@@ -114,6 +116,14 @@ function calculateWinner(squares) {
     }
   }
   return null;
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <p>© 2020 Game</p>
+    </footer>
+  );
 }
 
 export default TicTacToe;
