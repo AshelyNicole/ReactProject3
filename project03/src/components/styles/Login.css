@@ -1,0 +1,151 @@
+.login {
+    height: 100vh;
+    display: flex;
+    display: -ms-flexbox;
+    color: white;
+}
+
+.loginDesign {
+    width: 50%;
+    background-color: #ffffff;
+}
+
+.loginForm {
+    width: 50%;
+    background-color: #808080;
+    padding: 25px 40px;
+    overflow: auto;
+}
+
+.toggle {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flexpack: end;
+        justify-content: flex-end;
+    margin-bottom: 10%;
+}
+
+.switcher {
+    background-color: #686866;
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    font-size: .9em; 
+    text-decoration: none;   
+    color: #ffffff;
+}
+
+.switcherActive {
+    background-color: #ffffff;
+    color: black;
+}
+
+.switcher:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.switcher:last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.form {
+    margin-bottom: 100px;
+}
+
+.formTitle {
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.formLink {
+    margin: 0 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2em;
+    color: #cccccc;
+}
+
+.formLinkActive {
+    color: #ffffff;
+    border-bottom: 1px solid #27d1b2;
+}
+
+.formLink:first-child {
+    margin-left: 0;
+}
+
+
+.form {
+    margin-bottom: 40px;
+}
+
+.formLabel {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.formInput {
+    width: 85%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    outline: none;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.btn {
+    background-color: #27d1b2;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 15px 70px;
+    font-size: 1em;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.memberLink {
+    margin-left: 10px;
+    display: inline-block;
+    border-bottom: 2px solid #dddddd;
+    padding-bottom: 5px;
+    text-decoration: none; 
+    color: #dddddd;
+}
+
+.checkboxLabel {
+    font-size: 1em; 
+}
+
+.checkbox {
+    position: relative;
+    top: 1.5px;
+    margin-bottom: 2rem;
+}
+
+.termsLink {
+    margin-left: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 1px solid #dddddd;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+
+
