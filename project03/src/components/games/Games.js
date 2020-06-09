@@ -91,8 +91,8 @@ function Main() {
 
 function Footer() {
   return (
-    <footer className="copyright">
-      <p>© 2020 Dashboard</p>
+    <footer className="footer">
+      <p className="text">© 2020 Dashboard</p>
     </footer>
   );
 }
