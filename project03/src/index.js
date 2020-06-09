@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Dashboard from "./components/Dashboard";
+import TicTacToe from "./components/games/TicTacToe";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Dashboard />
+    <TicTacToe />
   </React.StrictMode>,
   document.getElementById("root")
 );

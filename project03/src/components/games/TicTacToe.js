@@ -4,7 +4,23 @@ import "../styles/TicTacToe.css";
 function TicTacToe() {
   return (
     <div>
+      <Header />
       <Board />
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div>
+      <div>
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-4">TIC-TAC-TOE</h1>
+            <h2 className="lead">Three-In-A-Row To Win!</h2>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -50,8 +66,10 @@ function Board() {
     );
   };
   // Setting the turn order
-  const winner = calculateWinner(boardSquares)
-  const turnOrder = winner ? `Winner is: ${winner}` : `Next player: ${xTurn ? "X" : "O"}`;
+  const winner = calculateWinner(boardSquares);
+  const turnOrder = winner
+    ? `Winner is: ${winner}`
+    : `Next player: ${xTurn ? "X" : "O"}`;
 
   return (
     // Creating the board and rendering turn order
@@ -87,11 +105,15 @@ function calculateWinner(squares) {
   for (let i = 0; i < winningCombinations.length; i++) {
     const [one, two, three] = winningCombinations[i];
     // check to see if values in the squares fulfill the winning combinations; If so, return X or O; else, return nothing
-    if (squares[one] && squares[one] === squares[two] && squares[two] === squares[three]) {
-      return squares[one]
-    } 
+    if (
+      squares[one] &&
+      squares[one] === squares[two] &&
+      squares[two] === squares[three]
+    ) {
+      return squares[one];
+    }
   }
-  return null
-};
+  return null;
+}
 
 export default TicTacToe;
