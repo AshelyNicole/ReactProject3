@@ -1,14 +1,20 @@
 const express = require("express");
+const app = express();
+const router = express.Router();
+const http = require("http");
 // const mongoose = require("mongoose");
 const socketio = require("socket.io");
-const http = require("http");
-// const routes = require("./routes");
-const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+// const routes = require("./routes");
 const PORT = process.env.PORT || 5000;
 
+router.get("/", (req, res) => {
+  res.send("Server is running!");
+});
+
 // Define middleware here
+app.use(router);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
