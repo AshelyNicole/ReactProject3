@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+.container-one {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #5680e9;
+}
+
+.container-two {
+  width: 20%;
+}
+
+.header {
+  color: black;
+  font-size: 2.5em;
+  padding-bottom: 15px;
+}
+
+.button {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  background: black;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input {
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.input-two {
+  padding: 15px 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+button:focus {
+  outline: 0;
+}

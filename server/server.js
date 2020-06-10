@@ -13,6 +13,14 @@ router.get("/", (req, res) => {
   res.send("Server is running!");
 });
 
+io.on("connection", (socket) => {
+  console.log("New connection!");
+
+  socket.on("disconnect", () => {
+    console.log("User left the chat!");
+  });
+});
+
 // Define middleware here
 app.use(router);
 app.use(express.urlencoded({ extended: true }));
