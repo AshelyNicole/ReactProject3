@@ -6,7 +6,6 @@ function JoinChat() {
   // Creating states
   const [user, setUser] = useState("");
   const [chatRoom, setChatRoom] = useState("");
-  // line 31 passing data as a url with query string npm package, able to input parameters with ?; also teranary operator to prevent user from clicking button if the user has not specified the name or the room which would break the app
   return (
     <div className="container-one">
       <div className="container-two">
@@ -30,7 +29,7 @@ function JoinChat() {
           />
           <Link
             onClick={(e) => (!user || !chatRoom ? e.preventDefault() : null)}
-            to={`/joinchat?user=${user}&chatRoom=${chatRoom}`}
+            to={"/chatroom"}
           >
             <button className="button" type="submit">
               Join
