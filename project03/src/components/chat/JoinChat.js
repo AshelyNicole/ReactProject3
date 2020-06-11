@@ -4,6 +4,8 @@ import "../styles/JoinChat.css";
 
 function JoinChat() {
   // Creating states
+  // Line 32 onclick ternary operator to prevent user from clicking button without entering a username and room which would break the app;
+  // Passing data as an url with parameters to be able to query the url string with npm dependency query-string
   const [user, setUser] = useState("");
   const [chatRoom, setChatRoom] = useState("");
   return (
@@ -29,7 +31,7 @@ function JoinChat() {
           />
           <Link
             onClick={(e) => (!user || !chatRoom ? e.preventDefault() : null)}
-            to={"/chatroom"}
+            to={`/chatroom?name=${user}&room=${chatRoom}`}
           >
             <button className="button" type="submit">
               Join
