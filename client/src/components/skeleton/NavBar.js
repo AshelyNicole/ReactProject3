@@ -33,7 +33,7 @@ function NavBar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/messaging" className="nav-link" href="#">
+                <Link to="/joinchat" className="nav-link" href="#">
                   Messaging
                 </Link>
               </li>

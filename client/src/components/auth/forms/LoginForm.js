@@ -17,7 +17,7 @@ class LoginForm extends Component {
                     </div>
                     <br />
                     <div className="formField">
-                        <button className="loginButton btn">Sign In</button>
+                        <Link to="/home" className="loginButton btn">Sign In</Link>
                         <Link to="/"className="memberLink">CREATE AN ACCOUNT</Link>
                     </div>
                 </form>

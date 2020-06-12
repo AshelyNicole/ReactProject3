@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  background-color: #c4c4c4;
+  background-color: #84ceeb;
 }
 
 .navbar-toggler.toggler {
@@ -28,8 +28,28 @@
   margin-left: 100px;
 }
 
+.card-img-top {
+  padding: 25px;
+}
+
+.card-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-text {
+  text-align: center;
+}
+
 .btn {
   margin: 5px;
+  width: 100%;
+  background-color: #5AB9EA;
+}
+
+img {
+  height: 250px;
+  width: 250px;
 }
 
 .row {
@@ -44,7 +64,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #c4c4c4;
+  background-color: #84CEEB;
 }
 
 .text {

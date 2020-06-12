@@ -25,7 +25,7 @@ class RegistrationForm extends Component {
                     </label>
 
                     <div className="formField">
-                        <button className="regButton btn">Sign Up</button>
+                        <Link to = "/home" className="regButton btn">Sign Up</Link>
                         <Link to="/login" className="memberLink">ALREADY A MEMBER</Link>
                     </div>
                 </form>
