@@ -1,0 +1,5 @@
+.new-message {
+  padding: 10px 5px 5px 5px;
+  overflow: auto;
+  flex: auto;
+}

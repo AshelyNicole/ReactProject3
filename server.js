@@ -8,16 +8,48 @@ const server = http.createServer(app);
 const io = socketio(server);
 // const routes = require("./routes");
 const PORT = process.env.PORT || 5000;
+const { addUser, findUser } = require("./client/src/components/chat/ChatUsers");
 
 router.get("/", (req, res) => {
   res.send("Server is running!");
 });
 
 io.on("connection", (socket) => {
-  console.log("New connection!");
+  socket.on("join", ({ name, room }, res) => {
+    const { error, newUser } = addUser({ id: socket.id, name, room });
+    // display error message if user chooses username already taken
+    if (error) {
+      return res(error);
+    }
+    // Message when user enters the chat room
+    socket.emit("newMessage", {
+      user: "ChatBot",
+      text: `Welcome to the chat room ${newUser.name}`,
+    });
+    // Message to other users in room
+    socket.broadcast.to(newUser.room).emit("newMessage", {
+      user: "ChatBot",
+      text: `${newUser.name} has entered the chat room`,
+    });
+    // join users in room
+    socket.join(newUser.room);
+
+    res();
+  });
+  // User messages
+  socket.on("deliverMessage", (newMessage, res) => {
+    const users = findUser(socket.id);
+
+    io.to(users.room).emit("newMessage", {
+      user: users.name,
+      text: newMessage,
+    });
+
+    res();
+  });
 
   socket.on("disconnect", () => {
-    console.log("User left the chat!");
+    console.log("User has left the chat!");
   });
 });
 
