@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./styles/Dashboard.css";
 import games from "../assets/gaming.png";
-import chattime from "../assets/chat.png";
+import chattime from "../assets/chatbubble.png";
 import Footer from "./skeleton/Footer";
 import NavBar from "./skeleton/NavBar";
 
