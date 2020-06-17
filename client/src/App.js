@@ -6,7 +6,7 @@ import EnterChat from "./components/chat/EnterChat";
 import ChatRoom from "./components/chat/ChatRoom";
 import GameCenter from "./components/games/Games";
 import TicTacToe from "./components/games/TicTacToe";
-import Tetris from "./components/games/Tetris";
+import Tetris from "./components/games/tetris/components/Tetris";
 
 class App extends Component {
   render() {

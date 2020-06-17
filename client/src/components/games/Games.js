@@ -6,6 +6,7 @@ import xo from "../../assets/xo.jpeg";
 import Footer from "../skeleton/Footer";
 import NavBar from "../skeleton/NavBar";
 
+
 class GameCenter extends Component {
   render() {
     return (
