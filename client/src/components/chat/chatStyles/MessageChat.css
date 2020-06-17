@@ -1,0 +1,35 @@
+.container-message {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 5%;
+  margin-top: 15px;
+}
+
+.user-name {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  padding-right: 10px;
+  background: #686866;
+  padding: 5px 20px;
+}
+
+.chatbox-message {
+  background: #27d1b2;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+  margin-right: 50px;
+}
+
+.chat-message {
+  width: 100%;
+  letter-spacing: 0;
+  float: left;
+  font-size: 1.2em;
+  text-align: center;
+  word-wrap: break-word;
+  color: white;
+}

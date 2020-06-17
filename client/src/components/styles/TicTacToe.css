@@ -1,4 +1,3 @@
-/* Header */
 .jumbotron {
   background-color: #c4c4c4;
 }
@@ -12,7 +11,7 @@
   text-align: center;
   font-weight: bold;
 }
-/* Squares */
+
 .square {
   background: white;
   cursor: crosshair;
@@ -30,15 +29,11 @@
   outline: none;
 }
 
-/* Rows */
-
 .row:after {
   clear: both;
   content: "";
   display: table;
 }
-
-/* Board */
 
 .board {
   position: absolute;
@@ -48,14 +43,10 @@
   margin-top: 50px;
 }
 
-/* Turn Order */
-
 .turn-order {
   font-weight: bold;
   font-size: 35px;
 }
-
-/* Footer */
 
 .footer {
   position: fixed;

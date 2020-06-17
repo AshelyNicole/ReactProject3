@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/JoinChat.css";
+import "./chatStyles/EnterChat.css";
 
-function JoinChat() {
+function EnterChat() {
   // Creating states
   // Line 32 onclick ternary operator to prevent user from clicking button without entering a username and room which would break the app;
   // Passing data as an url with to be able to query the url string with npm dependency query-string
@@ -11,7 +11,7 @@ function JoinChat() {
   return (
     <div className="container-one">
       <div className="container-two">
-        <h1 className="header">Join Chat Room</h1>
+        <h1 className="header-one">Enter Chat Room</h1>
         <div>
           <input
             className="input"
@@ -34,7 +34,7 @@ function JoinChat() {
             to={`/chatroom?name=${user}&room=${chatRoom}`}
           >
             <button className="button" type="submit">
-              Join
+              Enter
             </button>
           </Link>
         </div>
@@ -43,4 +43,4 @@ function JoinChat() {
   );
 }
 
-export default JoinChat;
+export default EnterChat;
