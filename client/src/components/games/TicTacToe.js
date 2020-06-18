@@ -4,7 +4,7 @@ import "../styles/TicTacToe.css";
 function TicTacToe() {
   return (
     <div>
-      <Header />
+      <Jumbotron />
       <Board />
       <Footer />
     </div>
@@ -12,8 +12,13 @@ function TicTacToe() {
 }
 
 // Header
-function Header() {
-  return <div></div>;
+function Jumbotron() {
+  return (
+    <div className="jumbotron">
+      <h1 className="title">TIC-TAC-TOE</h1>
+      <h2 className="title">THREE IN-A-ROW TO WIN!</h2>
+    </div>
+  );
 }
 
 // square
@@ -64,7 +69,7 @@ function Board() {
 
   return (
     // Creating the board and rendering turn order
-    <div className="board">
+    <div className="game-board">
       <div className="turn-order">{turnOrder}</div>
       <div className="board-row">
         {renderSquares(0)} {renderSquares(1)} {renderSquares(2)}

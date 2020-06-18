@@ -23,7 +23,7 @@
   display: table;
 }
 
-.board {
+.game-board {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -37,4 +37,20 @@
   font-weight: bold;
   font-size: 35px;
   text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.jumbotron {
+  padding: 40px;
+  background-color: #27d1b2;
+  width: 100%;
+  border-radius: 0;
+}
+
+body {
+  background-color: #686866;
 }
