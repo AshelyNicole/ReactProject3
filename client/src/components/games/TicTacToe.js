@@ -13,18 +13,7 @@ function TicTacToe() {
 
 // Header
 function Header() {
-  return (
-    <div>
-      <div>
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h1 className="display-4">TIC-TAC-TOE</h1>
-            <h2 className="lead">Three-In-A-Row To Win!</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <div></div>;
 }
 
 // square
@@ -77,13 +66,13 @@ function Board() {
     // Creating the board and rendering turn order
     <div className="board">
       <div className="turn-order">{turnOrder}</div>
-      <div className="row">
+      <div className="board-row">
         {renderSquares(0)} {renderSquares(1)} {renderSquares(2)}
       </div>
-      <div className="row">
+      <div className="board-row">
         {renderSquares(3)} {renderSquares(4)} {renderSquares(5)}
       </div>
-      <div className="row">
+      <div className="board-row">
         {renderSquares(6)} {renderSquares(7)} {renderSquares(8)}
       </div>
     </div>
@@ -119,11 +108,7 @@ function calculateWinner(squares) {
 }
 
 function Footer() {
-  return (
-    <footer className="footer">
-      <p className="text">© 2020 Game</p>
-    </footer>
-  );
+  return <div></div>;
 }
 
 export default TicTacToe;

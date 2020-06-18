@@ -1,22 +1,9 @@
-.jumbotron {
-  background-color: #c4c4c4;
-}
-
-.display-4 {
-  text-align: center;
-  font-weight: bold;
-}
-
-.lead {
-  text-align: center;
-  font-weight: bold;
-}
-
 .square {
+  display: inline-block;
+  float: left;
   background: white;
-  cursor: crosshair;
   border: 2px solid black;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   margin-right: -1px;
   margin-top: -1px;
@@ -24,39 +11,30 @@
   text-align: center;
   width: 90px;
   line-height: 80px;
-  height: 80px;
+  height: 90px;
   display: inline-block;
   outline: none;
+  text-decoration: none;
 }
 
-.row:after {
+.board-row:after {
   clear: both;
   content: "";
   display: table;
 }
 
 .board {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 50px;
 }
 
 .turn-order {
   font-weight: bold;
   font-size: 35px;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #c4c4c4;
-}
-
-.text {
   text-align: center;
-  font-weight: bold;
 }
