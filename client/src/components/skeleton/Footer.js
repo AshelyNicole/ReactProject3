@@ -4,7 +4,7 @@ import '../styles/Dashboard.css';
 function Footer() {
     return (
       <footer className="footer">
-        <p className="text">© 2020 Dashboard</p>
+        <p className="text">© 2020 Clubhouse</p>
       </footer>
     );
 }

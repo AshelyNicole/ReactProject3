@@ -1,8 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../auth/actions/authActions";
 import '../styles/Dashboard.css';
 
-function NavBar() {
+class NavBar extends Component {
+  onLogoutClick = e => {
+    e.preventDefault()
+    this.props.logoutUser()
+  }
+
+  render () {
     return (
       <div>
         <nav className="navbar">
@@ -33,15 +42,30 @@ function NavBar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/messaging" className="nav-link" href="#">
+                <Link to="/enterchat" className="nav-link" >
                   Messaging
                 </Link>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link" onClick={this.onLogoutClick}>
+                  Log Out
+                </button>  
               </li>
             </ul>
           </div>
         </nav>
       </div>
     );
+  }
 }
 
-export default NavBar;
+NavBar.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+}
+
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect( mapStateToProps, { logoutUser })(NavBar);

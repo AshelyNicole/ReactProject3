@@ -111,10 +111,11 @@
     border: none;
     outline: none;
     border-radius: 25px;
-    padding: 15px 70px;
+    padding: 1px 70px;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 500;
     color: #ffffff;
+    
 }
 
 .memberLink {
