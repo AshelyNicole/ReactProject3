@@ -65,7 +65,7 @@ function Board() {
   const winner = calculateWinner(boardSquares);
   const turnOrder = winner
     ? `Winner is: ${winner}`
-    : `Next player: ${xTurn ? "X" : "O"}`;
+    : `Next Player: ${xTurn ? "X" : "O"}`;
 
   return (
     // Creating the board and rendering turn order
@@ -113,7 +113,13 @@ function calculateWinner(squares) {
 }
 
 function Footer() {
-  return <div></div>;
+  return (
+    <div className="footer-tic-tac-toe">
+      <p className="footer-text">
+        © 2020 <i class="fa fa-gamepad" aria-hidden="true"></i>
+      </p>
+    </div>
+  );
 }
 
 export default TicTacToe;
