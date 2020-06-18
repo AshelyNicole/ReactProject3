@@ -12,26 +12,42 @@ import ChatRoom from "./components/chat/ChatRoom";
 import GameCenter from "./components/games/Games";
 import TicTacToe from "./components/games/TicTacToe";
 import Tetris from "./components/games/tetris/components/Tetris";
-import Logout from "./components/skeleton/NavBar";
 import PrivateRoute from "./components/auth/PrivateRoute/PrivateRoute";
 
+// Check for token to keep user logged in
+if (localStorage.jwtToken) {
+  // Set auth token header auth
+  const token = localStorage.jwtToken;
+  setAuthToken(token);
+  // Decode token and get user info and exp
+  const decoded = jwt_decode(token);
+  // Set user and isAuthenticated
+  store.dispatch(setCurrentUser(decoded));
+  // Check for expired token
+  const currentTime = Date.now() / 1000; // to get in milliseconds
+  if (decoded.exp < currentTime) {
+    // Logout user
+    store.dispatch(logoutUser());
 
+    // Redirect to login
+    window.location.href = "./login";
+  }
+}
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <Provider store={store}>
           <Router>
+            <Route exact path="/" component= {Login} />
             <Switch>
-              <Route exact path="/" component= {Login} />
               <PrivateRoute exact path="/home" component={Dashboard} />
-              <Route path="/enterchat" exact component={EnterChat} />
-              <Route path="/chatroom" exact component={ChatRoom} />
-              <Route path="/games" component={GameCenter} />
-              <Route path="/tictactoe" component={TicTacToe} />
-              <Route path="/tetris" component={Tetris} />
-              <Route path="/logout" component= {Logout} />
             </Switch>
+            <Route path="/enterchat" exact component={EnterChat} />
+            <Route path="/chatroom" exact component={ChatRoom} />
+            <Route path="/games" component={GameCenter} />
+            <Route path="/tictactoe" component={TicTacToe} />
+            <Route path="/tetris" component={Tetris} />
           </Router>
         </Provider>
       </React.Fragment>

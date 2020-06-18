@@ -28,6 +28,13 @@ class LoginForm extends Component {
         }
     }
 
+    componentDidMount() {
+        // If logged in and user navigates to Login page, should redirect them to dashboard
+        if (this.props.auth.isAuthenticated) {
+          this.props.history.push("/dashboard");
+        }
+    }
+
     onChange = e => {
         this.setState({ [e.target.id]: e.target.value })
     }
@@ -68,7 +75,7 @@ class LoginForm extends Component {
                     </div>
                     <br />
                     <div className="formField">
-                        <button className="loginButton btn">Sign In</button>
+                        <button className="loginButton btn"Link >Sign In</button>
                         <Link to="/"className="memberLink">CREATE AN ACCOUNT</Link>
                     </div>
                 </form>
