@@ -12,7 +12,23 @@ To log in to an account, select the "Log In" button and provide your email and p
 
 ## Installation
 
+```npm run dev```
+
 ## NPM Dependencies
+
+- bcryptjs
+- query-string
+- dotenv
+- express
+- http
+- react-dom
+- react-router-dom
+- react-custom-scrollbars
+- passport
+- passport-local
+- sequelize
+- socket.io
+- nodemon
 
 ## Credits
 
@@ -21,3 +37,7 @@ To log in to an account, select the "Log In" button and provide your email and p
 ## Deployed Project
 
 ## Contributors
+
+-  [Ashley Rumbaoa]
+-  [Oscar Renderos]
+-  [Jorge Morales]
