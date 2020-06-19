@@ -1,4 +1,4 @@
-# Clubhouse
+# ClubHouse
 
 ## Features
 
