@@ -13,6 +13,8 @@ Chat with friends or family by choosing a username and choosing the same room.
 
 ### Tetris
 
+Bring down blocks from the top of the screen. You can move the blocks around, either left to right and/or you can rotate them. Your objective is to get all the blocks to fill all the empty space in a line at the bottom of the screen; whenever you do this, you’ll find that the blocks vanish and you get awarded some points.
+
 ### Tic-Tac-Toe
 
 ## Installation
