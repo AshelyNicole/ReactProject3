@@ -1,4 +1,4 @@
-# ReactProject3
+# Clubhouse
 
 ## Features
 
