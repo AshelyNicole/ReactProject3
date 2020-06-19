@@ -40,9 +40,6 @@ class RegistrationForm extends Component {
             password2: this.state.password,
         }
         this.props.registerUser(newUser, this.props.history)
-        
-
-        
     }
 
  
