@@ -1,4 +1,4 @@
-# ReactProject3
+# ClubHouse
 
 ## Features
 
@@ -30,9 +30,10 @@ To log in to an account, select the "Log In" button and provide your email and p
 - socket.io
 - nodemon
 
-## Credits
 
 ## Source
+
+Source code for this project available [here](https://github.com/AshelyNicole/ReactProject3)
 
 ## Deployed Project
 
