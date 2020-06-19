@@ -19,9 +19,8 @@ class LoginForm extends Component {
     componentWillReceiveProps(nextProps) {
         console.log(nextProps)
         if (nextProps.auth.isAuthenticated) {
-            console.log("loaded Component")
             //sends user to home dashboard after logging in
-            this.props.history.go("/home")
+            window.location = "/home"
         }
         if (nextProps.errors) {
             this.setState({

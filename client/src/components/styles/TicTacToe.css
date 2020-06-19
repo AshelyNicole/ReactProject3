@@ -1,5 +1,5 @@
 .square {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   background-color: #27d1b2;
   border: 2px solid black;
@@ -12,7 +12,7 @@
   width: 90px;
   line-height: 80px;
   height: 90px;
-  display: inline-block;
+  /* display: inline-block; */
   outline: none;
   text-decoration: none;
 }
@@ -45,6 +45,7 @@
   background-color: #27d1b2;
   width: 100%;
   border-radius: 0;
+  position: fixed;
 }
 
 .footer-tic-tac-toe {
