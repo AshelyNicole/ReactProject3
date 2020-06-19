@@ -34,6 +34,8 @@ To log in to an account, select the "Log In" button and provide your email and p
 
 ## Source
 
+Source code for this project available [here](https://github.com/nickrayj45/WeTrivia)
+
 ## Deployed Project
 
 ## Contributors
