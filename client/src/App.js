@@ -18,9 +18,10 @@ class App extends Component {
             <Route path="/home" component={Dashboard} />
             <Route path="/enterchat" exact component={EnterChat} />
             <Route path="/chatroom" exact component={ChatRoom} />
+            <Route path="/tetris" component={Tetris} />
             <Route path="/games" component={GameCenter} />
             <Route path="/tictactoe" component={TicTacToe} />
-            <Route path="/tetris" component={Tetris} />
+
           </Switch>
         </Router>
       </React.Fragment>
