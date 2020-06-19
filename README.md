@@ -29,10 +29,23 @@ To log in to an account, select the "Log In" button and provide your email and p
 - react-router-dom
 - react-custom-scrollbars
 - passport
-- passport-local
-- sequelize
+- passport-jwt
 - socket.io
+- socket.io-client
 - nodemon
+- body-parser
+- concurrently
+- is-empty
+- jsonwebtoken
+- mongoose
+- validator
+- axios
+- classnames
+- jwt-decode
+- prop-types
+- redux
+- redux-thunk
+- styled-components
 
 
 ## Source
