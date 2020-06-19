@@ -1,7 +1,7 @@
 import React from "react";
 import "./chatStyles/Header.css";
 
-// Header for Message box; passing in and destructuring prop from Chatroom
+// Header for Message box; passing in and destructuring prop from Chatroom/
 function Header({ chatRoom }) {
   return (
     <div className="header-two">
