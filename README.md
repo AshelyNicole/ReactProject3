@@ -10,7 +10,9 @@ To log in to an account, select the "Log In" button and provide your email and p
 
 ### Chat with Friends/Family
 
-### Games
+### Tetris
+
+### Tic-Tac-Toe
 
 ## Installation
 
