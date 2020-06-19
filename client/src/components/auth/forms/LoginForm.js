@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../actions/authActions";
@@ -17,21 +17,24 @@ class LoginForm extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        console.log(nextProps)
         if (nextProps.auth.isAuthenticated) {
+            console.log("loaded Component")
             //sends user to home dashboard after logging in
-            this.props.history.push("/home")
+            this.props.history.go("/home")
         }
         if (nextProps.errors) {
             this.setState({
                 errors: nextProps.errors
             })
         }
-    }
+    };
+
 
     componentDidMount() {
         // If logged in and user navigates to Login page, should redirect them to dashboard
         if (this.props.auth.isAuthenticated) {
-          this.props.history.push("/dashboard");
+            window.location = "/home"
         }
     }
 
@@ -39,7 +42,7 @@ class LoginForm extends Component {
         this.setState({ [e.target.id]: e.target.value })
     }
 
-    onSubmit = e => {
+    onsubmit = e => {
         e.preventDefault()
 
         const userData = {
@@ -50,13 +53,14 @@ class LoginForm extends Component {
     }
 
 
+
     render(){
         const { errors } = this.state
 
         return (            
             <div className="form">
-                <form className="formOutline" onSubmit="this.onSubmit">
-                    <div clasName="formField">
+                <form noValidate onSubmit={this.onsubmit}>
+                    <div className="formField">
                         <label className="formLabel" htmlFor="email">Email</label>
                         <span className="red-text">
                             {errors.emails}
@@ -65,7 +69,7 @@ class LoginForm extends Component {
                         <input type="email" id="email" className={classnames("formInput", {invalid: errors.email || errors.emailnotfound})} onChange={this.onChange} value={this.state.email} error={errors.email} />
                     </div>
                     <br />
-                    <div clasName="formField">
+                    <div className="formField">
                         <label className="formLabel" htmlFor="password">Password</label>
                         <span className="red-text">
                             {errors.password}
@@ -75,7 +79,7 @@ class LoginForm extends Component {
                     </div>
                     <br />
                     <div className="formField">
-                        <button className="loginButton btn"Link >Sign In</button>
+                        <button className="loginButton btn" type="submit">Sign In</button>
                         <Link to="/"className="memberLink">CREATE AN ACCOUNT</Link>
                     </div>
                 </form>
@@ -95,4 +99,4 @@ const mapStateToProps = state => ({
     errors: state.errors
 })
 
-export default connect( mapStateToProps, { loginUser }) (withRouter(LoginForm));
+export default connect( mapStateToProps, { loginUser })(LoginForm);

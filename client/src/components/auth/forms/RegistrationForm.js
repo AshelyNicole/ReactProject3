@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter} from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../actions/authActions";
@@ -17,6 +17,7 @@ class RegistrationForm extends Component {
         }
     }
     
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
             this.setState({
@@ -25,18 +26,11 @@ class RegistrationForm extends Component {
         }
     }
 
-    componentDidMount() {
-        //If Logged in user accidently goes back to registration page it will redirect them to dashboard
-        if(this.props.auth.isAuthenticated) {
-            this.props.history.push("/home")
-        }
-    }
-
     onChange = e => {
         this.setState({ [e.target.id]: e.target.value })
     }
 
-    onSubmit = e => {
+    onsubmit = e => {
         e.preventDefault()
 
         const newUser = {
@@ -46,45 +40,52 @@ class RegistrationForm extends Component {
             password2: this.state.password,
         }
         this.props.registerUser(newUser, this.props.history)
+        
+
+        
     }
+
+ 
 
     render(){
         const { errors } = this.state
 
-        return (            
-            <div className="form">
-                <form noValidate className="formOutline" onSubmit="this.onSubmit">
-                    <div clasName="formField">
-                        <label className="formLabel" htmlFor="name">Full Name</label>
-                        <span className="red-text">{errors.name}</span>
-                        <input type="text" id="name" className={classnames("formInput", { invalid: errors.name})}  onChange={this.onChange} value={this.state.name} error={errors.name} />
-                    </div>
-                    <br/>
-                    <div clasName="formField">
-                        <label className="formLabel" htmlFor="email">Email</label>
-                        <span className="red-text">{errors.email}</span>
-                        <input type="email" id="email" className={classnames("formInput", { invalid: errors.email})}  onChange={this.onChange} value={this.state.email} error={errors.email} />
-                    </div>
-                    <br/>
-                    <div clasName="formField">
-                        <label className="formLabel" htmlFor="password">Password</label>
-                        <span className="red-text">{errors.password}</span>
-                        <input type="password" id="password" className={classnames("formInput", { invalid: errors.password})}  onChange={this.onChange} value={this.state.password} error={errors.password} />
-                    </div>
-                    <br/>
-                    <div clasName="formField">
-                        <label className="formLabel" htmlFor="password2">Confirm Password</label>
-                        <span className="red-text">{errors.password2}</span>
-                        <input type="password" id="password2" className={classnames("formInput", { invalid: errors.password2})}  onChange={this.onChange} value={this.state.password2} error={errors.password2} />
-                    </div>
-                    
+        return (       
+            <React.Fragment>
+                <div className="container form">
+                    <form noValidate onSubmit={this.onsubmit}>
+                        <div className="formField">
+                            <label className="formLabel" htmlFor="name">Full Name</label>
+                            <span className="red-text">{errors.name}</span>
+                            <input type="text" id="name" className={classnames("formInput", { invalid: errors.name})}  onChange={this.onChange} value={this.state.name} error={errors.name} />
+                        </div>
+                        <br/>
+                        <div className="formField">
+                            <label className="formLabel" htmlFor="email">Email</label>
+                            <span className="red-text">{errors.email}</span>
+                            <input type="email" id="email" className={classnames("formInput", { invalid: errors.email})}  onChange={this.onChange} value={this.state.email} error={errors.email} />
+                        </div>
+                        <br/>
+                        <div className="formField">
+                            <label className="formLabel" htmlFor="password">Password</label>
+                            <span className="red-text">{errors.password}</span>
+                            <input type="password" id="password" className={classnames("formInput", { invalid: errors.password})}  onChange={this.onChange} value={this.state.password} error={errors.password} />
+                        </div>
+                        <br/>
+                        <div className="formField">
+                            <label className="formLabel" htmlFor="password2">Confirm Password</label>
+                            <span className="red-text">{errors.password2}</span>
+                            <input type="password" id="password2" className={classnames("formInput", { invalid: errors.password2})}  onChange={this.onChange} value={this.state.password2} error={errors.password2} />
+                        </div>
+                        
 
-                    <div className="formField">
-                        <button className="regButton btn" type="submit">Sign Up</button>
-                        <Link to="/login" className="memberLink">ALREADY A MEMBER</Link>
-                    </div>
-                </form>
-            </div>
+                        <div className="formField">
+                            <button className="regButton btn" type="submit">Sign Up</button>
+                            <Link to="/login" className="memberLink">ALREADY A MEMBER</Link>
+                        </div>
+                    </form>
+                </div>
+            </React.Fragment>
         )
     }
 }

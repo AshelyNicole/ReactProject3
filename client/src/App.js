@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./components/auth/util/setAuthToken";
 import { setCurrentUser, logoutUser } from "./components/auth/actions/authActions";
@@ -12,7 +12,7 @@ import ChatRoom from "./components/chat/ChatRoom";
 import GameCenter from "./components/games/Games";
 import TicTacToe from "./components/games/TicTacToe";
 import Tetris from "./components/games/tetris/components/Tetris";
-import PrivateRoute from "./components/auth/PrivateRoute/PrivateRoute";
+// import PrivateRoute from "./components/auth/PrivateRoute/PrivateRoute";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -33,21 +33,22 @@ if (localStorage.jwtToken) {
     window.location.href = "./login";
   }
 }
+
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <Provider store={store}>
           <Router>
-            <Route exact path="/" component= {Login} />
             <Switch>
-              <PrivateRoute exact path="/home" component={Dashboard} />
+              <Route path="/home" component={Dashboard} />
+              <Route path="/enterchat" exact component={EnterChat} />
+              <Route path="/chatroom" exact component={ChatRoom} />
+              <Route path="/games" component={GameCenter} />
+              <Route path="/tictactoe" component={TicTacToe} />
+              <Route path="/tetris" component={Tetris} />
+              <Route exact path="/" render= {(props)=> <Login {...props} />} />
             </Switch>
-            <Route path="/enterchat" exact component={EnterChat} />
-            <Route path="/chatroom" exact component={ChatRoom} />
-            <Route path="/games" component={GameCenter} />
-            <Route path="/tictactoe" component={TicTacToe} />
-            <Route path="/tetris" component={Tetris} />
           </Router>
         </Provider>
       </React.Fragment>

@@ -8,7 +8,7 @@ import NavBar from "./skeleton/NavBar";
 
 class Dashboard extends Component {
   render() {
-    return (
+    return ( 
       <div>
         <NavBar />
         <Main />
@@ -22,6 +22,8 @@ class Dashboard extends Component {
 
 
 function Main() {
+
+  console.log("Home is LOADED")
   return (
     <div className="row">
       <div className="card">
@@ -43,7 +45,7 @@ function Main() {
           <p className="card-text">
             Click on the button below to start chatting with friends or family
           </p>
-          <Link to="/messaging" className="btn btn-primary">
+          <Link to="/enterchat" className="btn btn-primary">
             Chat
           </Link>
         </div>
