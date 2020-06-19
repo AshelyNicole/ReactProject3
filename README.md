@@ -38,6 +38,6 @@ To log in to an account, select the "Log In" button and provide your email and p
 
 ## Contributors
 
--  [Ashley Rumbaoa](https://github.com/anabee)
+-  [Ashley Rumbaoa](https://github.com/AshelyNicole)
 -  [Oscar Renderos](https://github.com/orenderos)
 -  [Jorge Morales](https://github.com/jmorales113)
