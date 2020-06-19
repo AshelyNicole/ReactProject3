@@ -4,7 +4,7 @@ import "../styles/TicTacToe.css";
 function TicTacToe() {
   return (
     <div>
-      <Header />
+      <Jumbotron />
       <Board />
       <Footer />
     </div>
@@ -12,17 +12,11 @@ function TicTacToe() {
 }
 
 // Header
-function Header() {
+function Jumbotron() {
   return (
-    <div>
-      <div>
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h1 className="display-4">TIC-TAC-TOE</h1>
-            <h2 className="lead">Three-In-A-Row To Win!</h2>
-          </div>
-        </div>
-      </div>
+    <div className="jumbotron">
+      <h1 className="title">TIC-TAC-TOE</h1>
+      <h2 className="title">THREE IN-A-ROW TO WIN!</h2>
     </div>
   );
 }
@@ -71,19 +65,19 @@ function Board() {
   const winner = calculateWinner(boardSquares);
   const turnOrder = winner
     ? `Winner is: ${winner}`
-    : `Next player: ${xTurn ? "X" : "O"}`;
+    : `Next Player: ${xTurn ? "X" : "O"}`;
 
   return (
     // Creating the board and rendering turn order
-    <div className="board">
+    <div className="game-board">
       <div className="turn-order">{turnOrder}</div>
-      <div className="row">
+      <div className="board-row">
         {renderSquares(0)} {renderSquares(1)} {renderSquares(2)}
       </div>
-      <div className="row">
+      <div className="board-row">
         {renderSquares(3)} {renderSquares(4)} {renderSquares(5)}
       </div>
-      <div className="row">
+      <div className="board-row">
         {renderSquares(6)} {renderSquares(7)} {renderSquares(8)}
       </div>
     </div>
@@ -120,9 +114,11 @@ function calculateWinner(squares) {
 
 function Footer() {
   return (
-    <footer className="footer">
-      <p className="text">© 2020 Game</p>
-    </footer>
+    <div className="footer-tic-tac-toe">
+      <p className="footer-text">
+        © 2020 <i class="fa fa-gamepad" aria-hidden="true"></i>
+      </p>
+    </div>
   );
 }
 
