@@ -39,6 +39,6 @@ Source code for this project available [here](https://github.com/AshelyNicole/Re
 
 ## Contributors
 
--  [Ashley Rumbaoa](https://github.com/AshelyNicole)
+-  [Ashely Rumbaoa](https://github.com/AshelyNicole)
 -  [Oscar Renderos](https://github.com/orenderos)
 -  [Jorge Morales](https://github.com/jmorales113)
