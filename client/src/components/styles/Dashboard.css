@@ -4,32 +4,18 @@
   box-sizing: border-box;
 }
 
-.navbar {
-  background-color: #c4c4c4;
-}
-
-.navbar-toggler.toggler {
-  cursor: pointer;
-  outline: none;
-  padding: 10px;
-}
-.icon-bars {
-  color: black;
-  font-size: 2rem;
-}
-
-.nav-link {
-  color: black;
-}
-
-.card {
-  width: 18rem;
+.tiles {
   margin-right: 100px;
-  margin-left: 100px;
 }
 
-.btn {
-  margin: 5px;
+
+.btn-primary {
+  font-size: 1.5em;
+}
+
+.cardTitle {
+  text-align: center;
+  color: #5ab9ea;
 }
 
 .row {
