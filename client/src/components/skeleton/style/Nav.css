@@ -1,0 +1,23 @@
+.nav {
+    background-color: #c4c4c4;    
+    height: 6rem;
+}
+
+.title {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.nav-link {
+    display: flex;
+    color: #5ab9ea;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.navWrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
