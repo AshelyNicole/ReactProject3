@@ -14,7 +14,7 @@ function EnterChat() {
         <h1 className="header-one">Enter Chat Room</h1>
         <div>
           <input
-            className="input"
+            className="input-one"
             placeholder="Enter your username"
             name="name"
             type="text"
