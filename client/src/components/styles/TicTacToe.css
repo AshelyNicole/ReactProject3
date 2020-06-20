@@ -65,3 +65,16 @@
 .fa {
   color: black;
 }
+
+@media (min-width: 300px) and (max-width: 1200px) {
+  .game-board {
+    width: 90%;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .turn-order {
+    width: 90%;
+    float: left;
+  }
+}
