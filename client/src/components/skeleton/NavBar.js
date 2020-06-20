@@ -15,7 +15,7 @@ class Navigation extends Component {
 
   render () {
     return (
-    <React.Fragment>
+    <React.Fragment classname="header-space">
       <Navbar.Brand>
         <Link to="/home" className="title">Clubhouse</Link>
       </Navbar.Brand>
