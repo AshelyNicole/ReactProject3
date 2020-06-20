@@ -8,6 +8,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const path = require("path");
 
 // API Routes
 const users = require("./routes/usersRoutes")
@@ -94,6 +95,10 @@ app.use("/api/users", users);
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client","build", "index.html"));
+  })
 }
 
 
