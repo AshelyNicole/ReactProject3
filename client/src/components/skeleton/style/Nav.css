@@ -1,6 +1,7 @@
 .nav {
     background-color: #c4c4c4;    
     height: 6rem;
+    justify-content: center;
 }
 
 .title {
@@ -15,5 +16,7 @@
     text-decoration: none;
     text-transform: none;
 }
+
+
 
 
