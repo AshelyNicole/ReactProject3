@@ -8,7 +8,7 @@ To sign up for an account, select the "Sign Up" button and provide your preferre
 
 To log in to an account, select the "Log In" button and provide your email and password.
 
-### Chat with Friends/Family
+### Chat with Friends
 Chat with friends or family by choosing a username and choosing the same room.
 
 ### Tetris

@@ -77,7 +77,7 @@ app.use(bodyParser.json());
 require('dotenv').config();
 
 // Connect to the Mongo DB
-const uri = process.env.MONGODB_URI;
+const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true});
 const connection = mongoose.connection;
 connection.once("open", () => {
