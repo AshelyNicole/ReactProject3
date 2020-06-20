@@ -40,7 +40,7 @@ function Main() {
         <Card.Img variant="top" src={blocks} />
         <Card.Body>
           <Card.Title className="cardTitle">
-            <Link to="/enterchat"> Tetris </Link>
+            <Link to="/tetris"> Tetris </Link>
           </Card.Title>
         </Card.Body>
       </Card>

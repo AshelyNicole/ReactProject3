@@ -6,7 +6,7 @@
 .title {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 10rem;
 }
 
 .nav-link {
@@ -16,8 +16,4 @@
     text-transform: none;
 }
 
-.navWrapper {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-}
+
