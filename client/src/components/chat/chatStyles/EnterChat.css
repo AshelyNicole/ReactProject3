@@ -14,6 +14,7 @@
 .header-one {
   color: #27d1b2;
   font-size: 2.5rem;
+  text-align: left;
 }
 
 .input-one {
@@ -53,4 +54,16 @@ input:optional {
   width: 100%;
   margin-top: 30px;
   outline: none;
+}
+
+@media (min-width: 300px) and (max-width: 1200px) {
+  .input-one {
+    width: 100%;
+  }
+  .input-two {
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+  }
 }
