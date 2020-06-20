@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../auth/actions/authActions";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import "./style/Nav.css";
 
 class Navigation extends Component {
@@ -15,11 +15,13 @@ class Navigation extends Component {
 
   render () {
     return (
-    <React.Fragment classname="header-space">
-      <Navbar.Brand>
-        <Link to="/home" className="title">Clubhouse</Link>
-      </Navbar.Brand>
-      <Link to="/" onClick={this.onLogoutClick} className="nav-link">Log Out</Link>
+    <React.Fragment>
+      <Nav>
+        <Navbar.Brand>
+          <Link to="/home" className="title">Clubhouse</Link>
+        </Navbar.Brand>
+        <Link to="/" onClick={this.onLogoutClick} className="nav-link">Log Out</Link>
+      </Nav>
     </React.Fragment>
        
     );
