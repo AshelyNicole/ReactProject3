@@ -32,3 +32,9 @@
     width: 100%;
   }
 }
+
+.room-wrapper{
+  background-color: #686866;
+  padding-left: 50px;
+  padding-top: 10px;
+}

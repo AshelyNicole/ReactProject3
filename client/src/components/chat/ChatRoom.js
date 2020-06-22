@@ -5,6 +5,7 @@ import "./chatStyles/ChatRoom.css";
 import Header from "./Header";
 import InputText from "./InputText";
 import ChatMessages from "./ChatMessages";
+import { Link } from "react-router-dom";
 
 let socket;
 function ChatRoom({ location }) {
@@ -52,17 +53,22 @@ function ChatRoom({ location }) {
   console.log(userMessage, messages);
   // Rendering components
   return (
-    <div className="container-one-room">
-      <div className="container-two-room">
-        <Header chatRoom={chatRoom} />
-        <ChatMessages username={username} messages={messages} />
-        <InputText
-          userMessage={userMessage}
-          setUserMessage={setUserMessage}
-          sendUserMessages={sendUserMessages}
-        />
+    <React.Fragment>
+      <div className="room-wrapper">
+        <Link to="/home" className="chat-links white-text">Home</Link>
       </div>
-    </div>
+      <div className="container-one-room">
+        <div className="container-two-room">
+          <Header chatRoom={chatRoom} />
+          <ChatMessages username={username} messages={messages} />
+          <InputText
+            userMessage={userMessage}
+            setUserMessage={setUserMessage}
+            sendUserMessages={sendUserMessages}
+          />
+        </div>
+      </div>
+    </React.Fragment>
   );
 }
 export default ChatRoom;

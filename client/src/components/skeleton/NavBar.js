@@ -16,12 +16,30 @@ class Navigation extends Component {
   render () {
     return (
     <React.Fragment>
-      <Nav>
+      <Navbar collapseOnSelect expand="lg">
         <Navbar.Brand>
           <Link to="/home" className="title">Clubhouse</Link>
         </Navbar.Brand>
-        <Link to="/" onClick={this.onLogoutClick} className="nav-link">Log Out</Link>
-      </Nav>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link>
+              <Link to="/home" className="nav-link">Home</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/games" className="nav-link">Games</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/enterchat" className="nav-link">Chat</Link>
+            </Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link>
+            <Link to="/" onClick={this.onLogoutClick} className="nav-link">Log Out</Link>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </React.Fragment>
        
     );
