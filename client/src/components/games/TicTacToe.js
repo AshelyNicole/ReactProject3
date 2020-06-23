@@ -43,11 +43,11 @@ function Board() {
   const handleClick = (index) => {
     // Making a copy of the board state
     const newSquares = [...boardSquares];
-    // if the index of the board is fill or there is a winner, return null
+    // if the index of the board is full or there is a winner, return null
     if (newSquares[index] || winner) {
       return null;
     }
-    // mutate that copy, add X or O and calculate turns
+    // mutated copy of board, add X or O and calculate turns
     newSquares[index] = xTurn ? "X" : "O";
     // set the state of the board
     setBoardSquares(newSquares);
