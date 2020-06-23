@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import { Link } from 'react-router-dom';
 import {createStage, checkCollision} from '../gameHelpers';
 import {StyledTetrisWrapper, StyledTetris} from './styles/StyledTetris';
 import {usePlayer} from '../hooks/usePlayer';
@@ -9,6 +9,7 @@ import {useGameStatus} from '../hooks/useGameStatus';
 import Stage from './Stage';
 import Display from './Display';
 import StartButton from './StartButton';
+
 
 const Tetris = () => {
     const[dropTime, setDropTime] = useState(null);
@@ -94,7 +95,7 @@ const move = ({ keyCode }) => {
 
   return (
     <StyledTetrisWrapper   role="button" tabIndex="0" onKeyDown={e => move(e)} onKeyUp={keyUp}>
-      
+     <Link to="/games" className="games-link white-text">Return to Game Center</Link>
     <StyledTetris>
       <Stage stage={stage} />
       <aside>

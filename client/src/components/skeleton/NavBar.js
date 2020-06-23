@@ -3,63 +3,50 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../auth/actions/authActions";
-import '../styles/Dashboard.css';
+import { Navbar, Nav } from "react-bootstrap";
+import "./style/Nav.css";
 
-class NavBar extends Component {
+class Navigation extends Component {
   onLogoutClick = e => {
     e.preventDefault()
     this.props.logoutUser()
+    window.location = "/"
   }
 
   render () {
     return (
-      <div>
-        <nav className="navbar">
-          <h1 className="navbar-text">Title(TBD)</h1>
-          <button
-            className="navbar-toggler toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent1"
-            aria-controls="navbarSupportedContent1"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="icon-bars">
-              <i className="fas fa-bars fa-1x" />
-            </span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent1">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <Link to="/home" className="nav-link">
-                  Home <span className="sr-only">(current)</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/games" className="nav-link">
-                  Games
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/enterchat" className="nav-link" >
-                  Messaging
-                </Link>
-              </li>
-              <li className="nav-item">
-                  <Link to="/" className="nav-link" onClick={this.onLogoutClick}>
-                    Log Out
-                  </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+    <React.Fragment>
+      <Navbar collapseOnSelect expand="lg">
+        <Navbar.Brand>
+          <Link to="/home" className="title">Clubhouse</Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link>
+              <Link to="/home" className="nav-link">Home</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/games" className="nav-link">Games</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/enterchat" className="nav-link">Chat</Link>
+            </Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link>
+            <Link to="/" onClick={this.onLogoutClick} className="nav-link">Log Out</Link>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </React.Fragment>
+       
     );
   }
 }
 
-NavBar.propTypes = {
+Navigation.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 }
@@ -68,4 +55,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 })
 
-export default connect( mapStateToProps, { logoutUser })(NavBar);
+export default connect( mapStateToProps, { logoutUser })(Navigation);

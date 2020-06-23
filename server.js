@@ -8,6 +8,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const path = require("path");
 
 // API Routes
 const users = require("./routes/usersRoutes")
@@ -15,9 +16,9 @@ const users = require("./routes/usersRoutes")
 const PORT = process.env.PORT || 5000;
 const { addUser, findUser } = require("./client/src/components/chat/ChatUsers");
 
-router.get("/", (req, res) => {
-  res.send("Server is running!");
-});
+// router.get("/", (req, res) => {
+//  res.send("Server is running!");
+// });
 
 io.on("connection", (socket) => {
   socket.on("join", ({ name, room }, res) => {
@@ -92,9 +93,13 @@ app.use("/api/users", users);
 
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
+//if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-}
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client","build", "index.html"));
+  })
+//}
 
 
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/TicTacToe.css";
 
 function TicTacToe() {
@@ -116,7 +117,10 @@ function Footer() {
   return (
     <div className="footer-tic-tac-toe">
       <p className="footer-text">
+        <Link to= "/games" className="black-text games-link">Return to Game Center</Link>
+        <br/>
         © 2020 <i class="fa fa-gamepad" aria-hidden="true"></i>
+        <br/>
       </p>
     </div>
   );
