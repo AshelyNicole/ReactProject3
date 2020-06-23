@@ -76,8 +76,6 @@ router.post("/login", (req, res) => {
                     name: user.name
                 };
 
-                console.log("------------------")
-                console.log(secretOrKey)
                 //Sign Token
                 jwt.sign(
                     payload,
@@ -88,8 +86,6 @@ router.post("/login", (req, res) => {
                         expiresIn: 31556926 //1year in secs
                     },
                     (err, token) => {
-                        console.log(err)
-                        console.log(token)
                         res.json({
                             success: true,
                             token: "Bearer" + token 

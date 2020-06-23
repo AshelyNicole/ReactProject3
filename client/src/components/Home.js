@@ -24,7 +24,6 @@ class Dashboard extends Component {
 
 
 function Main() {
-  console.log("Home is LOADED")
   return (
     <div className="row">
       <Card style={{ width: '18rem' }} className="tiles">

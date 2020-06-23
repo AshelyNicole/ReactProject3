@@ -61,9 +61,8 @@ io.on("connection", (socket) => {
 
 
 // Define middleware here
-app.use(router);
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
 
 //Body Parser Middleware for Login Authentification
 app.use (
@@ -72,7 +71,7 @@ app.use (
   })
 );
 app.use(bodyParser.json());
-
+app.use(router);
 //Database codes
 require('dotenv').config();
 
