@@ -89,7 +89,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 //Login API Routes
-app.use("/api/users", users);
+router.use("/api/users", users);
 
 
 // Serve up static assets (usually on heroku)
