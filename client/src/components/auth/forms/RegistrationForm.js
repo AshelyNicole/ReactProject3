@@ -32,7 +32,7 @@ class RegistrationForm extends Component {
 
     onsubmit = e => {
         e.preventDefault()
-
+        console.log("Hello")
         const newUser = {
             name: this.state.name,
             email: this.state.email,
