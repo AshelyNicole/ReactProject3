@@ -59,6 +59,8 @@ Source code for this project available [here](https://github.com/AshelyNicole/Re
 
 ## Deployed Project
 
+https://serene-sea-67556.herokuapp.com/
+
 ## Contributors
 
 -  [Ashely Rumbaoa](https://github.com/AshelyNicole)
