@@ -23,34 +23,41 @@ The player who is playing "X" always goes first. Players alternate clicking on t
 
 ```npm run dev```
 
-## NPM Dependencies
+## Technologies Used
 
-- bcryptjs
-- query-string
-- dotenv
-- express
-- http
-- react-dom
-- react-router-dom
-- react-custom-scrollbars
-- passport
-- passport-jwt
-- socket.io
-- socket.io-client
-- nodemon
-- body-parser
-- concurrently
-- is-empty
-- jsonwebtoken
-- mongoose
-- validator
-- axios
-- classnames
-- jwt-decode
-- prop-types
-- redux
-- redux-thunk
-- styled-components
+- HTML
+- CSS
+- JavaScript
+- React.js
+- JSX
+- React-Bootstrap for styling
+- Bcryptjs
+- Query-string
+- Dotenv
+- Express
+- Http
+- React-dom
+- React-router-dom
+- React-custom-scrollbars
+- Passport
+- Passport-jwt
+- Socket.io
+- Socket.io-client
+- Nodemon
+- Body-parser
+- Concurrently
+- Is-empty
+- Jsonwebtoken
+- Mongoose
+- MongoDB
+- Validator
+- Axios
+- Classnames
+- Jwt-decode
+- Prop-types
+- Redux
+- Redux-thunk
+- Styled-components
 
 
 ## Source
