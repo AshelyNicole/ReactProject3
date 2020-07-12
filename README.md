@@ -21,7 +21,7 @@ The player who is playing "X" always goes first. Players alternate clicking on t
 
 ### Installation
 
-```npm run dev```
+```npm install```
 
 ## Technologies Used
 
