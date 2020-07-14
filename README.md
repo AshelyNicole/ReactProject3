@@ -59,7 +59,6 @@ The player who is playing "X" always goes first. Players alternate clicking on t
 - Redux-thunk
 - Styled-components
 
-
 ## Source
 
 Source code for this project available [here](https://github.com/AshelyNicole/ReactProject3)
@@ -67,6 +66,11 @@ Source code for this project available [here](https://github.com/AshelyNicole/Re
 ## Deployed Project
 
 https://serene-sea-67556.herokuapp.com/
+
+![Home](https://user-images.githubusercontent.com/57970306/87482955-61f84800-c5e7-11ea-9662-ddf70846cccc.PNG)
+![Dashboard](https://user-images.githubusercontent.com/57970306/87482960-63297500-c5e7-11ea-886f-51b0e62ece2c.PNG)
+![Games](https://user-images.githubusercontent.com/57970306/87482967-64f33880-c5e7-11ea-8e10-36655eb8a84b.PNG)
+![Chat](https://user-images.githubusercontent.com/57970306/87482972-66246580-c5e7-11ea-9a99-e3ded1bb2d0d.PNG)
 
 ## Contributors
 
