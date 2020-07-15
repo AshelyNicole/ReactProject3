@@ -1,5 +1,7 @@
 # ClubHouse
 
+Due to most having stay-at-home-orders because of COVID-19, Clubhouse is a social media application that allows users to choose between either playing one of the selected games or interact with their friends and family to stay in touch.
+
 ## Features
 
 ### Sign up or Log in
@@ -9,6 +11,7 @@ To sign up for an account, select the "Sign Up" button and provide your preferre
 To log in to an account, select the "Log In" button and provide your email and password.
 
 ### Chat with Friends
+
 Chat with friends or family by choosing a username and choosing the same room.
 
 ### Tetris
